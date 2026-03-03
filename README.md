@@ -70,7 +70,7 @@ codelens/
 | ✅ Multiple snippets with individual explanations | "All Explanations" tab — all snippets numbered |
 | ✅ Diff view: original vs optimized | Side-by-side color diff tab |
 | ✅ Time & Space complexity | Dedicated Complexity tab |
-| ✅ **AST annotation before LLM** | PHP regex parser runs first, injects structure into prompt — **Bonus** |
+| ✅ **AST annotation before LLM** | PHP regex parser runs first, injects structure into prompt |
 
 ---
 
@@ -138,7 +138,7 @@ The project uses **two separate AST parsers** that work together:
 
 This separation means highlighting is instant (no server round-trip) while the LLM prompt gets the deep structural context.
 
-#### 3. AST Annotation Before LLM (Bonus Requirement)
+#### 3. AST Annotation Before LLM
 The PHP `buildAST()` function parses the code **before** sending it to OpenAI. The AST summary is injected at the **top** of the prompt so the model sees the structure first:
 
 ```
@@ -266,12 +266,3 @@ async function fetchUserData(userId) {
 | `Cmd + Enter` (Mac) | Analyze code |
 
 ---
-
-## 🔑 API Key Safety
-
-- Never commit `config.php` with a real key to GitHub
-- Add `config.php` to `.gitignore`
-- For deployment, use environment variables:
-```php
-define("OPENAI_API_KEY", getenv("OPENAI_API_KEY"));
-```
