@@ -46,9 +46,6 @@ php -S localhost:8000
 ```php
 define("OPENAI_API_KEY", "sk-proj-your-key-here");
 ```
-
-> ⚠️ Never commit `config.php` with your real API key to GitHub. Add it to `.gitignore`.
-
 ---
 
 ## 📁 Project Structure
