@@ -278,15 +278,3 @@ async function fetchUserData(userId) {
 ```php
 define("OPENAI_API_KEY", getenv("OPENAI_API_KEY"));
 ```
-
----
-
-## 👩‍💻 Author
-
-Built by **Khushbu** as part of the AI technical take-home assessment.
-
----
-
-## 📄 License
-
-MIT
